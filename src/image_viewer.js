@@ -1,4 +1,3 @@
-import './styles/image_viewer.css';
 import one from './assets/1.png';
 import two from './assets/2.jpg';
 import three from './assets/3.jpg';
@@ -17,7 +16,7 @@ const createImage = function (src) {
 
 const images = [];
 
-// push two images to the array
+// push images to the array
 images.push(createImage("https://source.unsplash.com/random/1600x900"));
 images.push(createImage(one));
 images.push(createImage(two));
@@ -28,8 +27,15 @@ images.push(createImage(six));
 images.push(createImage(seven));
 images.push(createImage(eight));
 // output
-console.log(images);
 
-for (let i = 0; i < images.length; i++) {
-    document.body.appendChild(images[i]);
+// for (let i = 0; i < 10; i++) {
+//     images.push(createImage("https://source.unsplash.com/random/1600x900"));
+// }
+// for (let i = 0; i < images.length; i++) {
+//     document.body.appendChild(images[i]);
+// }
+for (let image of images) { // new for loop for iterables
+    document.body.appendChild(image);
 }
+
+console.log(images);

@@ -1,17 +1,10 @@
-body,
-html {
-    width: 100%;
-    height: 100%;
-}
-
 body {
-    display: flex;
-    flex-flow: column nowrap;
+    max-width: 50em;
 }
 
 img {
-    width: 90%;
-    min-width: 90%;
+    /* width: 90%;
+    min-width: 90%; */
     margin: 5vh auto 0;
 }
 

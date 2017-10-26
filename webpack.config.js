@@ -17,16 +17,16 @@ const config = {
                 use: 'babel-loader', // tell webpack to use babel (**presets found in .babelrc file**)
                 test: /\.js$/ // regex to find all .js files and apply babel        
             },
-            // { // recognize and use css
-            //     use: ['style-loader', 'css-loader'], //order matters here, use rules are applied from RIGHT to LEFT
-            //     test: /\.css$/ // do it to all da css found
-            // },
-            { // css to seperate file
-                loader: ExtractTextPlugin.extract({
-                    loader: 'css-loader'
-                }),
-                test: /\.css$/
+            { // recognize and use css
+                use: ['style-loader', 'css-loader'], //order matters here, use rules are applied from RIGHT to LEFT
+                test: /\.css$/ // do it to all da css found
             },
+            // { // css to seperate file
+            //     use: ExtractTextPlugin.extract({
+            //         use: 'css-loader'
+            //     }),
+            //     test: /\.css$/
+            // },
             {
                 test: /\.(jpe?g|png|gif|svg)$/,
                 use: [{
